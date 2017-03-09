@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+
+<title>Insert</title>
+
+<script type="text/javascript">
+			function validateId(){
+				var  x = document.forms["addForm"]["id"].value;
+				
+				if(x == ""){
+					alert("Id can't be empty");
+					return false;
+				}
+				
+				if(isNaN(x)){
+					alert("Id can't have character");
+					return false;
+				}
+				
+				return true;
+			}
+		
+			function validateName(){
+				var  x = document.forms["addForm"]["name"].value;
+				
+				if(x == ""){
+					alert("Name can't be empty");
+					return false;
+				}
+				
+				if(!/^[a-zA-Z]*$/g.test(document.Insertform.name.value)){
+					alert(" Name can't have anything other then Character");
+					return false;
+				}
+				
+				return true;
+			}
+			
+			function validateSalary(){
+				var  x = document.forms["addForm"]["salary"].value;
+				
+				if(x == ""){
+					alert("Salary can't be empty");
+					return false;
+				}
+				
+				if(isNaN(x)){
+					alert("Salary can't have character");
+					return false;
+				}
+				
+				return true;
+			}
+		     function validate(){
+		    	 x=validateId();
+		    	 y=validateName();
+		    	 z=validateSalary();
+		    	 if(x==false || y == false || z == false)
+		    		 return false;
+		    	 return true;
+		     }
+		</script>
+
+
+</head>
+<body class="container-fluid">
+
+<div>
+
+	<div class="jumbotron" style="background-image:url('img.jpg');">
+  		<div class="container">
+   			 <h1 class="text-center" Style="color:white">Insert Page</h1>
+ 	 	</div>
+	</div>
+
+<br>
+	<div class="col-xs-4 list-group" >
+	<ul class="nav-pills nav-stacked">
+		<li class="list-group-item"><a href="Insert.html">Insert</a></li>
+		<li class="list-group-item"><a href="Update.html">Update</a></li>
+		<li class="list-group-item"><a href="Delete.html">Delete</a></li>
+		<li class="list-group-item"><a href="Search.html">Search</a></li>
+		<li class="list-group-item"><a href="ViewAll.html">View All</a></li>
+	</ul>
+	</div>
+
+	<div class="col-xs-8">
+	
+		<form action="Query" name="addForm" onsubmit="return validate()">
+			<b>ID:</b><input class="form-control" type="text" name="id"/><br>
+			<b>Name:</b><input class="form-control" type="text" name="name"/><br>
+			<b>Salary:</b><input class="form-control" type="text" name="salary"/><br>
+			<button  class="btn btn-success" type="submit" value="Insert" name="number">Insert</button>
+			
+		</form>		
+	</div>
+	
+</div>
+<br>
+<br>
+	
+</body>
+</html>

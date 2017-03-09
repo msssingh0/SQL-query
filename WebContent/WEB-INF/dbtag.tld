@@ -1,0 +1,36 @@
+<taglib>
+<tlib-version>1.0</tlib-version>
+<jsp-version>2.0</jsp-version>
+<short-name>My custom tag</short-name>
+
+<tag>
+	<name>DeleteResult</name>
+	<tag-class>tags.Delete</tag-class>
+	<body-content>empty</body-content>
+</tag>
+
+<tag>
+	<name>InsertResult</name>
+	<tag-class>tags.Insert</tag-class>
+	<body-content>empty</body-content>
+</tag>
+
+<tag>
+	<name>SearchResult</name>
+	<tag-class>tags.Search</tag-class>
+	<body-content>empty</body-content>
+</tag>
+
+<tag>
+	<name>UpdateResult</name>
+	<tag-class>tags.Update</tag-class>
+	<body-content>empty</body-content>
+</tag>
+
+<tag>
+	<name>ViewAll</name>
+	<tag-class>tags.ViewAll</tag-class>
+	<body-content>empty</body-content>
+</tag>
+
+</taglib>
